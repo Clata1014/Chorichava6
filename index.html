@@ -271,8 +271,26 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            transform: scale(1.28); 
+            transform: scale(1.28);
             filter: drop-shadow(0 8px 12px rgba(0,0,0,0.15));
+        }
+
+        /* Ajuste de imágenes para la línea Tradicional */
+        #tradicional .card-image-box {
+            height: 200px;
+            padding: 10px;
+        }
+
+        #tradicional .product-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transform: scale(1.28);
+        }
+
+        /* Ajuste suave solo para Santarrosano y Chicharrón tradicionales */
+        #tradicional .product-photo.trad-reduce {
+            transform: scale(1.18);
         }
 
         .card-details {
@@ -535,30 +553,6 @@
                             </div>
                         </div>
 
-                        <!-- Jalapeño -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava4/blob/main/Chorizojalape%C3%B1o.png?raw=true" class="product-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Jalapeño</h3>
-                                <p class="card-desc">Picante suave irresistible.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Jalapeño')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Llanero -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava4/blob/main/Chorizollanero.png?raw=true" class="product-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Llanero</h3>
-                                <p class="card-desc">Sabor auténtico del llano.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Llanero')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
                         <!-- Marinero -->
                         <div class="product-card">
                             <div class="card-image-box">
@@ -583,6 +577,30 @@
                             </div>
                         </div>
 
+                        <!-- Llanero -->
+                        <div class="product-card">
+                            <div class="card-image-box">
+                                <img src="Chorizollanero.webp" class="product-photo">
+                            </div>
+                            <div class="card-details">
+                                <h3 class="card-title">Llanero</h3>
+                                <p class="card-desc">Condimentado al estilo de la llanura.</p>
+                                <button class="buy-btn" onclick="orderProduct('Chorizo Llanero')">Pedir Ahora</button>
+                            </div>
+                        </div>
+
+                        <!-- Jalapeño -->
+                        <div class="product-card">
+                            <div class="card-image-box">
+                                <img src="Chorizojalapeño.webp" class="product-photo">
+                            </div>
+                            <div class="card-details">
+                                <h3 class="card-title">Jalapeño</h3>
+                                <p class="card-desc">Picor balanceado con sabor ahumado.</p>
+                                <button class="buy-btn" onclick="orderProduct('Chorizo Jalapeño')">Pedir Ahora</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -602,7 +620,7 @@
                         <!-- Santarrosano (REEMPLAZO DE COCTELERO) -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/chorichava5/blob/main/Chorizosantarrosanotradi.webp?raw=true" class="product-photo">
+                                <img src="Chorizosantarrosanotradi.webp" class="product-photo trad-reduce">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Santarrosano</h3>
@@ -611,15 +629,15 @@
                             </div>
                         </div>
 
-                        <!-- Casero -->
+                        <!-- Chicharrón -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://placehold.co/300x220/ffffff/D3D3D3?text=FOTO+AQUI" class="product-photo">
+                                <img src="Chorizochicharrontradi.png" class="product-photo trad-reduce">
                             </div>
                             <div class="card-details">
-                                <h3 class="card-title">Casero</h3>
+                                <h3 class="card-title">Chicharrón</h3>
                                 <p class="card-desc">La receta de la abuela.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Casero')">Pedir Ahora</button>
+                                <button class="buy-btn" onclick="orderProduct('Chorizo Chicharrón Tradicional')">Pedir Ahora</button>
                             </div>
                         </div>
 

@@ -290,6 +290,15 @@
             transform: none;
         }
 
+        /* Ajuste puntual para que Chicharrón tenga la misma escala de imagen que la línea Gourmet */
+        .product-photo--chicharron-tradi {
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: none;
+            transform: scale(1.28);
+        }
+
         .card-details {
             padding: 15px;
             text-align: center;
@@ -629,7 +638,7 @@
                         <!-- Chicharrón -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Chorizodechicharrontradi.png" class="product-photo">
+                                <img src="Chorizodechicharrontradi.png" class="product-photo product-photo--chicharron-tradi">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Chicharrón</h3>

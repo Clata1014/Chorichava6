@@ -29,7 +29,6 @@
             --brand-gold: #FFD700;
             --brand-dark: #1A1A1A;
             --card-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            --phone-blue: #007bff;
         }
 
         .app-container {
@@ -350,7 +349,7 @@
             font-size: 1rem;
             color: #444;
             margin-bottom: 30px;
-            line-height: 1.4; /* Ajustado de 1.5 a 1.4 para igualar body */
+            line-height: 1.6; /* Aumentado de 1.4 a 1.6 para dar más espacio */
         }
 
         .whatsapp-main-btn {
@@ -416,28 +415,6 @@
             z-index: 2000;
             animation: pulse 2s infinite;
         }
-
-        /* Botón Flotante de Llamar */
-        .phone-float {
-            position: fixed;
-            bottom: 90px; /* Encima del de WhatsApp */
-            right: 20px;
-            width: 55px;
-            height: 55px;
-            background: var(--phone-blue);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            color: white;
-            text-decoration: none;
-            box-shadow: 0 5px 20px rgba(0, 123, 255, 0.4);
-            z-index: 2000;
-            transition: transform 0.2s;
-        }
-        
-        .phone-float:active { transform: scale(0.9); }
 
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
@@ -925,11 +902,6 @@
             <p>&copy; 2024 ChoriChava - Medellín, Colombia</p>
             <p style="margin-top:10px; font-size: 0.7rem;">Amor por la tradición artesanal</p>
         </footer>
-
-        <!-- BOTÓN FLOTANTE DE LLAMADA -->
-        <a href="tel:573001234567" class="phone-float" title="Llámanos">
-            📞
-        </a>
 
         <!-- BOTÓN FLOTANTE DE WHATSAPP -->
         <a href="https://wa.me/573001234567" class="whatsapp-float" target="_blank" title="Chatea con nosotros">

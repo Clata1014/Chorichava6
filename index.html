@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="ChoriChava: Los mejores chorizos artesanales de Colombia. Línea gourmet, tradicional y más. Domicilios en Medellín y envíos nacionales.">
-    <title>ChoriChava</title>
+    <title>ChoriChava | Chorizos Artesanales</title>
     
     <!-- Favicon -->
     <link rel="icon" href="https://github.com/Clata1014/Chorichava4/blob/main/Fonditonuevo.png?raw=true" type="image/png">
@@ -16,7 +16,7 @@
 
     <style>
         /* =========================================
-           ESTILOS GENERALES & ANIMACIONES
+           ESTILOS GENERALES
            ========================================= */
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
         
@@ -52,7 +52,7 @@
             min-height: 100vh;
             box-shadow: 0 0 50px rgba(0,0,0,0.05);
             animation: fadeUp 0.8s ease-out;
-            padding-bottom: 80px; /* Espacio para el carrito flotante */
+            padding-bottom: 20px;
         }
 
         /* Navbar */
@@ -80,6 +80,41 @@
         
         .nav-logo:hover { transform: scale(1.02); }
 
+        /* Contenedor de acciones en el Navbar (Carrito + Menú) */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Carrito en el Navbar */
+        .nav-cart-btn {
+            position: relative;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: white; /* Color del icono */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-cart-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: var(--brand-gold);
+            color: var(--brand-red);
+            font-size: 0.7rem;
+            font-weight: bold;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--brand-red);
+        }
+
         .menu-btn {
             background: none;
             border: none;
@@ -87,11 +122,11 @@
             display: flex;
             flex-direction: column;
             gap: 5px;
-            padding: 10px;
+            padding: 5px;
         }
 
         .menu-btn span {
-            width: 30px;
+            width: 25px;
             height: 3px;
             background-color: #FFFFFF;
             border-radius: 2px;
@@ -201,7 +236,7 @@
             border-top: none;
         }
 
-        /* Títulos */
+        /* Títulos (Sin línea decorativa) */
         .section-title {
             text-align: center;
             font-family: 'Playfair Display', serif;
@@ -369,7 +404,7 @@
             line-height: 1.3;
         }
 
-        /* NUEVO: ESTILO PARA EL PRECIO */
+        /* ESTILO PARA EL PRECIO */
         .card-price {
             font-size: 1.1rem;
             font-weight: 800;
@@ -405,45 +440,28 @@
 
         .buy-btn:active { transform: scale(0.95); }
 
-        /* ESTILOS DEL CARRITO */
-        .cart-float-btn {
+        /* ESTILOS WHATSAPP FLOTANTE */
+        .whatsapp-float {
             position: fixed;
             bottom: 20px;
             right: 20px;
             width: 60px;
             height: 60px;
-            background: var(--brand-gold);
-            color: var(--brand-red);
+            background: #25D366;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            font-size: 32px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
             z-index: 2000;
-            cursor: pointer;
             transition: transform 0.3s;
             border: 2px solid white;
         }
 
-        .cart-float-btn:active { transform: scale(0.9); }
-
-        .cart-counter {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background: var(--brand-red);
-            color: white;
-            font-size: 0.8rem;
-            font-weight: bold;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid white;
-        }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
         /* MODAL DEL CARRITO */
         .cart-modal {
@@ -629,9 +647,17 @@
         <!-- HEADER -->
         <nav class="navbar">
             <img src="https://github.com/Clata1014/Chorichava4/blob/main/Fonditonuevo.png?raw=true" alt="Logo ChoriChava" class="nav-logo">
-            <button class="menu-btn" onclick="toggleMenu()">
-                <span></span><span></span><span></span>
-            </button>
+            
+            <div class="nav-actions">
+                <!-- CARRITO EN NAVBAR -->
+                <div class="nav-cart-btn" onclick="toggleCart()">
+                    🛒 <span class="nav-cart-count" id="cartCounter">0</span>
+                </div>
+
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </nav>
 
         <!-- MENU MÓVIL -->
@@ -1119,12 +1145,11 @@
             <p>&copy; 2024 ChoriChava - Medellín, Colombia</p>
             <p style="margin-top:10px; font-size: 0.7rem;">Amor por la tradición artesanal</p>
         </footer>
-
-        <!-- CARRITO FLOTANTE -->
-        <div class="cart-float-btn" onclick="toggleCart()">
-            🛒
-            <span class="cart-counter" id="cartCounter">0</span>
-        </div>
+        
+        <!-- BOTÓN WHATSAPP FLOTANTE -->
+        <a href="https://wa.me/573001234567" class="whatsapp-float" target="_blank" title="Chatea con nosotros">
+            💬
+        </a>
 
         <!-- OVERLAY DEL CARRITO -->
         <div class="overlay" id="overlay" onclick="toggleCart()"></div>

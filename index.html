@@ -166,15 +166,15 @@
 
         /* Secciones de Productos */
         .products-section {
-            padding: 10px 0 10px 0; /* Ligero ajuste para dar aire */
+            padding: 10px 0 10px 0; 
             background: #FAFAFA;
             border-bottom: 1px solid #eee; 
         }
 
-        /* Ajustes de espaciado para igualar todas las secciones */
+        /* Ajustes de espaciado */
         #gourmet, #tradicional, #otros {
             padding-top: 0 !important;
-            margin-top: -20px; /* Separación perfecta: ni muy pegado ni muy separado */
+            margin-top: -20px; 
             border-top: none;
         }
 
@@ -214,7 +214,7 @@
             width: max-content;
         }
 
-        /* Flechas (Gourmet) */
+        /* Flechas */
         .nav-arrow {
             position: absolute;
             top: 28%; 
@@ -235,7 +235,7 @@
             transition: all 0.2s;
         }
 
-        /* Flechas (Tradicional y Otros) - MÁS ARRIBA AL 22% */
+        /* Posición flechas */
         #gourmet .nav-arrow,
         #tradicional .nav-arrow,
         #otros .nav-arrow {
@@ -249,7 +249,7 @@
         /* Tarjeta de Producto */
         .product-card {
             width: 260px;
-            background: white; /* Blanco puro */
+            background: white; 
             border-radius: 15px;
             overflow: hidden;
             box-shadow: var(--card-shadow);
@@ -257,15 +257,27 @@
             position: relative;
         }
 
+        /* ==========================================================================
+           FONDO DE TEXTURA QUE ABARCA TODO EL CONTENEDOR (NUEVA IMAGEN)
+           ========================================================================== */
         .card-image-box {
             height: 200px;
-            background: transparent; /* Transparente para usar el blanco de la tarjeta */
+            width: 100%; /* Asegura que tome todo el ancho */
+            
+            /* Textura de fondo actualizada */
+            background-image: url('https://github.com/Clata1014/Chorichava6/blob/main/fondochoriamor.png?raw=true');
+            
+            /* 'cover' asegura que la imagen cubra todo el espacio sin dejar huecos */
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 10px;
             position: relative;
-            border-bottom: 1px solid #eee;
+            border-bottom: none;
         }
 
         .product-photo {
@@ -273,7 +285,7 @@
             height: 100%;
             object-fit: contain;
             transform: scale(1.28);
-            filter: drop-shadow(0 8px 12px rgba(0,0,0,0.15));
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.12));
         }
 
         .ahumado-photo {
@@ -327,13 +339,13 @@
 
         .buy-btn:active { transform: scale(0.95); }
 
-        /* Contacto - AJUSTADO PARA IGUALAR ESPACIOS */
+        /* Contacto */
         .contact-section {
-            padding: 0 20px 30px 20px; /* Top 0 para igualar a las otras secciones */
+            padding: 0 20px 30px 20px; 
             text-align: center;
             background: white;
-            border-top: none; /* Eliminado el borde para igualar flujo */
-            margin-top: -20px; /* Ajuste para separar un poquito la sección de contacto */
+            border-top: none; 
+            margin-top: -20px; 
         }
 
         .contact-title {
@@ -341,15 +353,15 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             font-weight: 800;
-            margin-bottom: 15px; /* Ajustado de 20px a 15px para igualar section-title */
-            padding-top: 15px; /* Agregado padding top igual a section-title */
+            margin-bottom: 15px; 
+            padding-top: 15px; 
         }
 
         .contact-text {
             font-size: 1rem;
             color: #444;
             margin-bottom: 30px;
-            line-height: 1.6; /* Aumentado de 1.4 a 1.6 para dar más espacio */
+            line-height: 1.6; 
         }
 
         .whatsapp-main-btn {
@@ -489,7 +501,7 @@
                         <!-- Ahumado -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Ahumado</h3>
@@ -501,7 +513,7 @@
                         <!-- Antioqueño -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Antioqueño</h3>
@@ -513,7 +525,7 @@
                         <!-- Argentino -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Argentino</h3>
@@ -525,7 +537,7 @@
                         <!-- Español -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Español</h3>
@@ -537,7 +549,7 @@
                         <!-- Marinero -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Marinero</h3>
@@ -549,7 +561,7 @@
                         <!-- Santarrosano -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Santarrosano</h3>
@@ -561,7 +573,7 @@
                         <!-- Llanero -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Llanero</h3>
@@ -573,7 +585,7 @@
                         <!-- Jalapeño -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Jalapeño</h3>
@@ -585,7 +597,7 @@
                         <!-- Mediterráneo -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Mediterráneo</h3>
@@ -597,7 +609,7 @@
                         <!-- Costero -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Costero</h3>
@@ -625,7 +637,7 @@
                         <!-- Montañés -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Montañés</h3>
@@ -637,7 +649,7 @@
                         <!-- Vaquero -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Vaquero</h3>
@@ -649,7 +661,7 @@
                         <!-- Casero -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Casero</h3>
@@ -661,7 +673,7 @@
                         <!-- Caballo -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Caballo</h3>
@@ -673,7 +685,7 @@
                         <!-- Campesino -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Campesino</h3>
@@ -685,7 +697,7 @@
                         <!-- Clásico -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Clásico</h3>
@@ -697,7 +709,7 @@
                         <!-- Butifarra -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Butifarra</h3>
@@ -709,7 +721,7 @@
                         <!-- Morcilla -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Morcilla</h3>
@@ -721,7 +733,7 @@
                         <!-- Chicharrón -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Chicharrón</h3>
@@ -733,7 +745,7 @@
                         <!-- Costilla -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Costilla</h3>
@@ -761,7 +773,7 @@
                         <!-- Arepas -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Arepas</h3>
@@ -773,7 +785,7 @@
                         <!-- Empanadas -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Empanadas</h3>
@@ -785,7 +797,7 @@
                         <!-- Hamburguesa -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Hamburguesa</h3>
@@ -797,7 +809,7 @@
                         <!-- Salchichón -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Salchichón</h3>
@@ -809,7 +821,7 @@
                         <!-- Queso de Cerdo -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Queso de Cerdo</h3>
@@ -821,7 +833,7 @@
                         <!-- Génova -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Génova</h3>
@@ -833,7 +845,7 @@
                         <!-- Cabanossi -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Cabanossi</h3>
@@ -845,7 +857,7 @@
                         <!-- Longaniza Picante -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Longaniza Picante</h3>
@@ -857,7 +869,7 @@
                         <!-- Salchicha Ranchera -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choriamor.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Salchicha Ranchera</h3>

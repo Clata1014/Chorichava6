@@ -29,6 +29,7 @@
             --brand-gold: #FFD700;
             --brand-dark: #1A1A1A;
             --card-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            --phone-blue: #007bff;
         }
 
         .app-container {
@@ -166,15 +167,15 @@
 
         /* Secciones de Productos */
         .products-section {
-            padding: 10px 0 20px 0; 
+            padding: 10px 0 10px 0; /* Ligero ajuste para dar aire */
             background: #FAFAFA;
             border-bottom: 1px solid #eee; 
         }
 
-        /* Ajustes de espaciado */
+        /* Ajustes de espaciado para igualar todas las secciones */
         #gourmet, #tradicional, #otros {
             padding-top: 0 !important;
-            margin-top: -10px;
+            margin-top: -20px; /* Separación perfecta: ni muy pegado ni muy separado */
             border-top: none;
         }
 
@@ -327,12 +328,13 @@
 
         .buy-btn:active { transform: scale(0.95); }
 
-        /* Contacto */
+        /* Contacto - AJUSTADO PARA IGUALAR ESPACIOS */
         .contact-section {
-            padding: 40px 20px;
+            padding: 0 20px 30px 20px; /* Top 0 para igualar a las otras secciones */
             text-align: center;
             background: white;
-            border-top: 1px solid #f0f0f0;
+            border-top: none; /* Eliminado el borde para igualar flujo */
+            margin-top: -20px; /* Ajuste para separar un poquito la sección de contacto */
         }
 
         .contact-title {
@@ -340,14 +342,15 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             font-weight: 800;
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* Ajustado de 20px a 15px para igualar section-title */
+            padding-top: 15px; /* Agregado padding top igual a section-title */
         }
 
         .contact-text {
             font-size: 1rem;
             color: #444;
             margin-bottom: 30px;
-            line-height: 1.5;
+            line-height: 1.4; /* Ajustado de 1.5 a 1.4 para igualar body */
         }
 
         .whatsapp-main-btn {
@@ -414,6 +417,28 @@
             animation: pulse 2s infinite;
         }
 
+        /* Botón Flotante de Llamar */
+        .phone-float {
+            position: fixed;
+            bottom: 90px; /* Encima del de WhatsApp */
+            right: 20px;
+            width: 55px;
+            height: 55px;
+            background: var(--phone-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(0, 123, 255, 0.4);
+            z-index: 2000;
+            transition: transform 0.2s;
+        }
+        
+        .phone-float:active { transform: scale(0.9); }
+
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
@@ -473,20 +498,21 @@
             </div>
         </section>
 
+        <!-- SECCIÓN GOURMET (INTACTA) -->
         <section class="products-section" id="gourmet">
             <h2 class="section-title">Línea <span>Gourmet</span></h2>
 
             <div class="carousel-wrapper">
-                <button class="nav-arrow prev" onclick="scrollCarousel('track-otros', -1)">‹</button>
-                <button class="nav-arrow next" onclick="scrollCarousel('track-otros', 1)">›</button>
+                <button class="nav-arrow prev" onclick="scrollCarousel('track-gourmet', -1)">‹</button>
+                <button class="nav-arrow next" onclick="scrollCarousel('track-gourmet', 1)">›</button>
 
-                <div class="carousel-container" id="track-otros">
+                <div class="carousel-container" id="track-gourmet">
                     <div class="carousel-track">
 
                         <!-- Ahumado -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Ahumado</h3>
@@ -498,7 +524,7 @@
                         <!-- Antioqueño -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Antioqueño</h3>
@@ -510,7 +536,7 @@
                         <!-- Argentino -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Argentino</h3>
@@ -522,7 +548,7 @@
                         <!-- Español -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Español</h3>
@@ -534,7 +560,7 @@
                         <!-- Marinero -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Marinero</h3>
@@ -546,7 +572,7 @@
                         <!-- Santarrosano -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Santarrosano</h3>
@@ -558,7 +584,7 @@
                         <!-- Llanero -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Llanero</h3>
@@ -570,7 +596,7 @@
                         <!-- Jalapeño -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Jalapeño</h3>
@@ -582,7 +608,7 @@
                         <!-- Mediterráneo -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Mediterráneo</h3>
@@ -594,7 +620,7 @@
                         <!-- Costero -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Costero</h3>
@@ -603,239 +629,12 @@
                             </div>
                         </div>
 
-                        <!-- Montañés -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Montañés</h3>
-                                <p class="card-desc">El clásico de Santa Rosa.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Santarrosano')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Vaquero -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Vaquero</h3>
-                                <p class="card-desc">Condimentado al estilo de la llanura.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Llanero')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Casero -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Casero</h3>
-                                <p class="card-desc">Receta familiar hecha con cariño.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Casero')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Caballo -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Caballo</h3>
-                                <p class="card-desc">Potente mezcla para los amantes de la parrilla.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Caballo')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Campesino -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Campesino</h3>
-                                <p class="card-desc">Sazonado con hierbas frescas de la finca.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Campesino')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Clásico -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Clásico</h3>
-                                <p class="card-desc">El preferido de siempre, con un giro italiano.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Clásico')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Butifarra -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Butifarra</h3>
-                                <p class="card-desc">Auténtico sabor costeño.</p>
-                                <button class="buy-btn" onclick="orderProduct('Butifarra')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Morcilla -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Morcilla</h3>
-                                <p class="card-desc">Rellena de arroz y especias.</p>
-                                <button class="buy-btn" onclick="orderProduct('Morcilla')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Chicharrón -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Chicharrón</h3>
-                                <p class="card-desc">Crocante y carnudo.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chicharrón')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Costilla -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Costilla</h3>
-                                <p class="card-desc">Ahumada y lista para asar.</p>
-                                <button class="buy-btn" onclick="orderProduct('Costilla Ahumada')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Arepas -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Arepas</h3>
-                                <p class="card-desc">El acompañante ideal.</p>
-                                <button class="buy-btn" onclick="orderProduct('Arepas')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Empanadas -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Empanadas</h3>
-                                <p class="card-desc">Rellenas de nuestro chorizo.</p>
-                                <button class="buy-btn" onclick="orderProduct('Empanadas')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Hamburguesa -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Hamburguesa</h3>
-                                <p class="card-desc">Carne de chorizo artesanal.</p>
-                                <button class="buy-btn" onclick="orderProduct('Hamburguesa de Chorizo')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Salchichón -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Salchichón</h3>
-                                <p class="card-desc">Tradicional cervecero.</p>
-                                <button class="buy-btn" onclick="orderProduct('Salchichón')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Queso de Cerdo -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Queso de Cerdo</h3>
-                                <p class="card-desc">Fiambre artesanal.</p>
-                                <button class="buy-btn" onclick="orderProduct('Queso de Cerdo')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Génova -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Génova</h3>
-                                <p class="card-desc">Estilo italiano curado.</p>
-                                <button class="buy-btn" onclick="orderProduct('Génova')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Cabanossi -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Cabanossi</h3>
-                                <p class="card-desc">Ideal para picadas.</p>
-                                <button class="buy-btn" onclick="orderProduct('Cabanossi')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Longaniza Picante -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Longaniza Picante</h3>
-                                <p class="card-desc">Sabor intenso y picante.</p>
-                                <button class="buy-btn" onclick="orderProduct('Longaniza Picante')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Salchicha Ranchera -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Salchicha Ranchera</h3>
-                                <p class="card-desc">Para desayunos y asados.</p>
-                                <button class="buy-btn" onclick="orderProduct('Salchicha Ranchera')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- SECCIÓN TRADICIONAL (INTACTA) -->
         <section class="products-section" id="tradicional">
             <h2 class="section-title">Línea <span>Tradicional</span></h2>
 
@@ -846,154 +645,10 @@
                 <div class="carousel-container" id="track-tradicional">
                     <div class="carousel-track">
 
-                        <!-- Ahumado -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Ahumado</h3>
-                                <p class="card-desc">Sabor intenso y tradicional.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Ahumado')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Antioqueño -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Antioqueño</h3>
-                                <p class="card-desc">El sabor de nuestra tierra.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Antioqueño')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Argentino -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Argentino</h3>
-                                <p class="card-desc">Ideal para choripán.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Argentino')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Alemán -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Alemán</h3>
-                                <p class="card-desc">Con notas de cerveza y mostaza.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Alemán')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Italiano -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Italiano</h3>
-                                <p class="card-desc">Aromático con hierbas mediterráneas.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Italiano')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Jalapeño -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Jalapeño</h3>
-                                <p class="card-desc">Picor balanceado con sabor ahumado.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Jalapeño')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Español -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Español</h3>
-                                <p class="card-desc">Con pimentón de la vera.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Español')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Marinero -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Marinero</h3>
-                                <p class="card-desc">Mezcla única de mariscos.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Marinero')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Santarrosano -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Santarrosano</h3>
-                                <p class="card-desc">El clásico de Santa Rosa.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Santarrosano')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Llanero -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Llanero</h3>
-                                <p class="card-desc">Condimentado al estilo de la llanura.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Llanero')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Mediterráneo -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Mediterráneo</h3>
-                                <p class="card-desc">Con pimentón de la vera.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Español')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Costero -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Costero</h3>
-                                <p class="card-desc">Mezcla única de mariscos.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Marinero')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
                         <!-- Montañés -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Montañés</h3>
@@ -1005,7 +660,7 @@
                         <!-- Vaquero -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Vaquero</h3>
@@ -1017,7 +672,7 @@
                         <!-- Casero -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Casero</h3>
@@ -1029,7 +684,7 @@
                         <!-- Caballo -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Caballo</h3>
@@ -1041,7 +696,7 @@
                         <!-- Campesino -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Campesino</h3>
@@ -1053,7 +708,7 @@
                         <!-- Clásico -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Clásico</h3>
@@ -1065,7 +720,7 @@
                         <!-- Butifarra -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Butifarra</h3>
@@ -1077,7 +732,7 @@
                         <!-- Morcilla -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Morcilla</h3>
@@ -1089,7 +744,7 @@
                         <!-- Chicharrón -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Chicharrón</h3>
@@ -1097,11 +752,11 @@
                                 <button class="buy-btn" onclick="orderProduct('Chicharrón')">Pedir Ahora</button>
                             </div>
                         </div>
-
+                        
                         <!-- Costilla -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Costilla</h3>
@@ -1110,10 +765,26 @@
                             </div>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN OTROS (EDITADA: LISTA CORTA Y ORDENADA) -->
+        <section class="products-section" id="otros">
+            <h2 class="section-title">Otros <span>Deliciosos</span></h2>
+
+            <div class="carousel-wrapper">
+                <button class="nav-arrow prev" onclick="scrollCarousel('track-otros', -1)">‹</button>
+                <button class="nav-arrow next" onclick="scrollCarousel('track-otros', 1)">›</button>
+
+                <div class="carousel-container" id="track-otros">
+                    <div class="carousel-track">
+
                         <!-- Arepas -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Arepas</h3>
@@ -1125,7 +796,7 @@
                         <!-- Empanadas -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Empanadas</h3>
@@ -1137,7 +808,7 @@
                         <!-- Hamburguesa -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Hamburguesa</h3>
@@ -1149,7 +820,7 @@
                         <!-- Salchichón -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Salchichón</h3>
@@ -1161,7 +832,7 @@
                         <!-- Queso de Cerdo -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Queso de Cerdo</h3>
@@ -1173,7 +844,7 @@
                         <!-- Génova -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Génova</h3>
@@ -1185,7 +856,7 @@
                         <!-- Cabanossi -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Cabanossi</h3>
@@ -1197,7 +868,7 @@
                         <!-- Longaniza Picante -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Longaniza Picante</h3>
@@ -1209,7 +880,7 @@
                         <!-- Salchicha Ranchera -->
                         <div class="product-card">
                             <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
+                                <img src="https://github.com/Clata1014/Chorichava6/blob/main/Choripan.png?raw=true" class="product-photo ahumado-photo">
                             </div>
                             <div class="card-details">
                                 <h3 class="card-title">Salchicha Ranchera</h3>
@@ -1222,388 +893,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="products-section" id="otros">
-            <h2 class="section-title">Otros <span>Deliciosos</span></h2>
-
-            <div class="carousel-wrapper">
-                <button class="nav-arrow prev" onclick="scrollCarousel('track-otros', -1)">‹</button>
-                <button class="nav-arrow next" onclick="scrollCarousel('track-otros', 1)">›</button>
-
-                <div class="carousel-container" id="track-otros">
-                    <div class="carousel-track">
-
-                        <!-- Ahumado -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Ahumado</h3>
-                                <p class="card-desc">Sabor intenso y tradicional.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Ahumado')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Antioqueño -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Antioqueño</h3>
-                                <p class="card-desc">El sabor de nuestra tierra.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Antioqueño')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Argentino -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Argentino</h3>
-                                <p class="card-desc">Ideal para choripán.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Argentino')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Alemán -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Alemán</h3>
-                                <p class="card-desc">Con notas de cerveza y mostaza.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Alemán')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Italiano -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Italiano</h3>
-                                <p class="card-desc">Aromático con hierbas mediterráneas.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Italiano')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Jalapeño -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Jalapeño</h3>
-                                <p class="card-desc">Picor balanceado con sabor ahumado.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Jalapeño')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Español -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Español</h3>
-                                <p class="card-desc">Con pimentón de la vera.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Español')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Marinero -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Marinero</h3>
-                                <p class="card-desc">Mezcla única de mariscos.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Marinero')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Santarrosano -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Santarrosano</h3>
-                                <p class="card-desc">El clásico de Santa Rosa.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Santarrosano')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Llanero -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Llanero</h3>
-                                <p class="card-desc">Condimentado al estilo de la llanura.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Llanero')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Mediterráneo -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Mediterráneo</h3>
-                                <p class="card-desc">Con pimentón de la vera.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Español')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Costero -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Costero</h3>
-                                <p class="card-desc">Mezcla única de mariscos.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Marinero')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Montañés -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Montañés</h3>
-                                <p class="card-desc">El clásico de Santa Rosa.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Santarrosano')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Vaquero -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Vaquero</h3>
-                                <p class="card-desc">Condimentado al estilo de la llanura.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Llanero')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Casero -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Casero</h3>
-                                <p class="card-desc">Receta familiar hecha con cariño.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Casero')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Caballo -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Caballo</h3>
-                                <p class="card-desc">Potente mezcla para los amantes de la parrilla.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Caballo')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Campesino -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Campesino</h3>
-                                <p class="card-desc">Sazonado con hierbas frescas de la finca.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Campesino')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Clásico -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Clásico</h3>
-                                <p class="card-desc">El preferido de siempre, con un giro italiano.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chorizo Clásico')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Butifarra -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Butifarra</h3>
-                                <p class="card-desc">Auténtico sabor costeño.</p>
-                                <button class="buy-btn" onclick="orderProduct('Butifarra')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Morcilla -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Morcilla</h3>
-                                <p class="card-desc">Rellena de arroz y especias.</p>
-                                <button class="buy-btn" onclick="orderProduct('Morcilla')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Chicharrón -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Chicharrón</h3>
-                                <p class="card-desc">Crocante y carnudo.</p>
-                                <button class="buy-btn" onclick="orderProduct('Chicharrón')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Costilla -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Costilla</h3>
-                                <p class="card-desc">Ahumada y lista para asar.</p>
-                                <button class="buy-btn" onclick="orderProduct('Costilla Ahumada')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Arepas -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Arepas</h3>
-                                <p class="card-desc">El acompañante ideal.</p>
-                                <button class="buy-btn" onclick="orderProduct('Arepas')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Empanadas -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Empanadas</h3>
-                                <p class="card-desc">Rellenas de nuestro chorizo.</p>
-                                <button class="buy-btn" onclick="orderProduct('Empanadas')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Hamburguesa -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Hamburguesa</h3>
-                                <p class="card-desc">Carne de chorizo artesanal.</p>
-                                <button class="buy-btn" onclick="orderProduct('Hamburguesa de Chorizo')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Salchichón -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Salchichón</h3>
-                                <p class="card-desc">Tradicional cervecero.</p>
-                                <button class="buy-btn" onclick="orderProduct('Salchichón')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Queso de Cerdo -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Queso de Cerdo</h3>
-                                <p class="card-desc">Fiambre artesanal.</p>
-                                <button class="buy-btn" onclick="orderProduct('Queso de Cerdo')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Génova -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Génova</h3>
-                                <p class="card-desc">Estilo italiano curado.</p>
-                                <button class="buy-btn" onclick="orderProduct('Génova')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Cabanossi -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Cabanossi</h3>
-                                <p class="card-desc">Ideal para picadas.</p>
-                                <button class="buy-btn" onclick="orderProduct('Cabanossi')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Longaniza Picante -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Longaniza Picante</h3>
-                                <p class="card-desc">Sabor intenso y picante.</p>
-                                <button class="buy-btn" onclick="orderProduct('Longaniza Picante')">Pedir Ahora</button>
-                            </div>
-                        </div>
-
-                        <!-- Salchicha Ranchera -->
-                        <div class="product-card">
-                            <div class="card-image-box">
-                                <img src="Choripan.png" class="product-photo ahumado-photo">
-                            </div>
-                            <div class="card-details">
-                                <h3 class="card-title">Salchicha Ranchera</h3>
-                                <p class="card-desc">Para desayunos y asados.</p>
-                                <button class="buy-btn" onclick="orderProduct('Salchicha Ranchera')">Pedir Ahora</button>
-                            </div>
-                        </div>
 
         <!-- SECCIÓN DE CONTACTO -->
         <section class="contact-section" id="contacto">
@@ -1637,6 +926,12 @@
             <p style="margin-top:10px; font-size: 0.7rem;">Amor por la tradición artesanal</p>
         </footer>
 
+        <!-- BOTÓN FLOTANTE DE LLAMADA -->
+        <a href="tel:573001234567" class="phone-float" title="Llámanos">
+            📞
+        </a>
+
+        <!-- BOTÓN FLOTANTE DE WHATSAPP -->
         <a href="https://wa.me/573001234567" class="whatsapp-float" target="_blank" title="Chatea con nosotros">
             💬
         </a>
